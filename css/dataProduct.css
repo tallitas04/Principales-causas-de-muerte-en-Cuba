@@ -29,7 +29,7 @@ body{
 }
 
 .main_section{
-    width:80%;
+    width:90%;
     display:flex;
     padding: 20px 10px;
     justify-content: center;
@@ -47,7 +47,37 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    
+}
+
+.grafica__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grafica__container canvas {
+    height: 400px;
+}
+
+.select {
+    font-weight: bold;
+    background-color: rgb(255, 60, 60);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    transition: .2s;
+}
+
+.select:hover {
+    background-color: rgba(255, 60, 60, 0.816);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
 }
 
 .section_paragraph{
@@ -55,8 +85,6 @@ body{
     margin-bottom:10px;
     font-size: .8rem;
     color: rgba(82,80,80);
-
-
 }
 
 

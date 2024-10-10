@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Product</title>
     <link rel="stylesheet" href="/css/dataProduct.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <header class = 'header'>
@@ -22,6 +24,31 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim laborum alias fugiat molestiae voluptatibus culpa veniam. Aperiam atque, quae repellat libero fuga voluptatum tempore. Tempore quam temporibus cupiditate enim veritatis!
                 </p>
 
+            </div>
+
+            
+            <div class="grafica__container grafica__container--desktop">
+                    <select name="select" id="selectProvincia" class="select">
+                        <option value="0">Pinar del Río</option>
+                        <option value="1">Artemisa</option>
+                        <option value="2" selected>La Habana</option>
+                        <option value="3">Ciudad de La Habana</option>
+                        <option value="4">Mayabeque</option>
+                        <option value="5">Matanzas</option>
+                        <option value="6">Villa Clara</option>
+                        <option value="7">Cienfuegos</option>
+                        <option value="8">Sancti Spíritus</option>
+                        <option value="9">Ciego de Ávila</option>
+                        <option value="10">Camagüey</option>
+                        <option value="11">Las Tunas</option>
+                        <option value="12">Holguín</option>
+                        <option value="13">Granma</option>
+                        <option value="14">Santiago de Cuba</option>
+                        <option value="15">Guantánamo</option>
+                        <option value="16">Isla de la Juventud</option>
+                        <option value="17">Toda Cuba</option>
+                    </select>
+                    <canvas class="grafica" id="investmentChart" width="400" height="200"></canvas>
             </div>
 
         </section>
@@ -56,9 +83,9 @@
             <div class = 'section_info'>
                 <a href = 'http://127.0.0.1:5500/index.html' class = 'section_link'>Volver</a>
             </div>
-
-        
+        </section>
     </main>
 
+    <script src="../js/datatProduct.js"></script>
 </body>
 </html>
