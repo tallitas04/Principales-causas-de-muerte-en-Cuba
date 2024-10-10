@@ -80,10 +80,17 @@ body{
     outline: none;
 }
 
+.section_title {
+    font-size: 1.5rem;
+    text-align: center;
+    border-left: 3px solid rgba(255, 60, 60, 0.816);
+}
+
 .section_paragraph{
     margin-top:10px;
     margin-bottom:10px;
-    font-size: .8rem;
+    font-size: .9rem;
+    line-height: 1.3rem;
     color: rgba(82,80,80);
 }
 
