@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.header {
+    background: rgb(156,147,255);
+    background: linear-gradient(90deg, rgba(156,147,255,1) 0%, rgba(140,131,255,1) 33%, rgba(124,115,255,1) 66%, rgba(108,99,255,1) 100%);
+    padding: 25px;
+    text-align: center;
+    color: #f0f0ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main__section {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 0px 0px 5px 1px rgba(82, 80, 80, 0.151);
+    margin-bottom: 50px;
+
+}
+
+.section__info {
+    padding-left: 40px;
+    padding-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.section__paragraph {
+    color: rgb(82, 80, 80);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img__container {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.img__container--mobile {
+    display: none;
+}
+
+.img__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.section__link {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 7px;
+    color: white;
+    background-color: black;
+    font-size: .7rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.section__link:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    transition: .2s;
+}
+
+@media screen and (max-width: 500px) {
+    .main__section {
+        flex-wrap: wrap;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
+    .img__container--mobile {
+        display: block;
+    }
+    
+    .img__container--desktop {
+        display: none;
+    }
+
+    .section__title {
+        min-width: 100%;   
+    }
+    .section__info {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .section__link {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+}
