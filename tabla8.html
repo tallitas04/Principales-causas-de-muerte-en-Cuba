@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Personal Médico en Provincias de Cuba</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .contenedor {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+       
+        <canvas id="investmentChart" width="400" height="200"></canvas>
+    </div>
+
+
+    <script>
+        var ctx = document.getElementById('investmentChart').getContext('2d');
+        let graph;
+        
+        function graph2(ctx, principalesViolaciones, tasas) {
+            if(graph) {
+                graph.destroy();
+            }
+
+            graph = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: principalesViolaciones,
+                    datasets: [
+                        {   
+                            label: principalesViolaciones[0],
+                            data: tasas[0],
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
+                            borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
+                            borderWidth: 1,
+                            pointRadius: 2,
+                            tension: 0.1
+                        },
+                        {   
+                            label: principalesViolaciones[1],
+                            data: tasas[1],
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[2],
+                            data: tasas[2],
+                            backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[3],
+                            data: tasas[3],
+                            backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[4],
+                            data: tasas[4],
+                            backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[5],
+                            data: tasas[5],
+                            backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[6],
+                            data: tasas[6],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[7],
+                            data: tasas[7],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[8],
+                            data: tasas[8],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[9],
+                            data: tasas[9],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        
+                        {
+                            label: principalesViolaciones[10],
+                            data: tasas[10],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[11],
+                            data: tasas[11],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[12],
+                            data: tasas[12],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[13],
+                            data: tasas[13],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                        {
+                            label: principalesViolaciones[14],
+                            data: tasas[14],
+                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
+                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
+                            borderWidth: 1,
+                            pointRadius: 5,
+                            tension: 0.1
+                        },
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Personal'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Años'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio [1985-2011].'
+                        }
+                    }
+                }    
+            });
+        }
+
+        function crearGrafico(){     
+                fetch('/Data/p13json.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        
+                        const principalesViolaciones = []
+                        for (const obj of Object.values(data)){
+                            principalesViolaciones.push(obj["Principales violaciones"]);
+                        }
+
+                        const tasas = []
+                        for (const obj of Object.values(data)){
+                            tasas.push(obj["Accidentes"]);
+                        }
+                        graph2(ctx, principalesViolaciones, tasas);
+                    
+                    })
+                    .catch(error => {
+                        console.error("error al cargar el Json " + error)
+                });
+            }
+        
+
+        crearGrafico();
+
+    </script>
+
+</body>
+</html>
+

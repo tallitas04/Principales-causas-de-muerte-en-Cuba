@@ -281,7 +281,7 @@ selectHtml.addEventListener('change', (event) => {
             break;
         }
     }
-
+    console.log(id);
     crearGrafico(id, idProvincia);
 });
 
