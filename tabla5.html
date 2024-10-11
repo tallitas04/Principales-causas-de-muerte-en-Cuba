@@ -21,10 +21,9 @@
 
     <script>
         var ctx = document.getElementById('investmentChart').getContext('2d');
-        var selectHtml = document.getElementById('selectProvincia');
         let graph;
         
-        function graph2(ctx, years, consultaAsistenciaMed, consultaAsistenciaMedValues) {
+        function graph2(ctx, years, enfermedades, tasas, id) {
             if(graph) {
                 graph.destroy();
             }
@@ -35,17 +34,17 @@
                     labels: years,
                     datasets: [
                         {   
-                            label: consultaAsistenciaMed[0],
-                            data: consultaAsistenciaMedValues[0],
+                            label: enfermedades[0],
+                            data: tasas[0][id],
                             backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                             borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                             borderWidth: 1,
                             pointRadius: 2,
                             tension: 0.1
                         },
-                        {
-                            label: consultaAsistenciaMed[1],
-                            data: consultaAsistenciaMedValues[1],
+                        {   
+                            label: enfermedades[1],
+                            data: tasas[1][id],
                             backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -53,8 +52,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[2],
-                            data: consultaAsistenciaMedValues[2],
+                            label: enfermedades[2],
+                            data: tasas[2][id],
                             backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -62,8 +61,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[3],
-                            data: consultaAsistenciaMedValues[3],
+                            label: enfermedades[3],
+                            data: tasas[3][id],
                             backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -71,8 +70,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[4],
-                            data: consultaAsistenciaMedValues[4],
+                            label: enfermedades[4],
+                            data: tasas[4][id],
                             backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
                             borderWidth: 1,
@@ -80,8 +79,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[5],
-                            data: consultaAsistenciaMedValues[5],
+                            label: enfermedades[5],
+                            data: tasas[5][id],
                             backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -89,8 +88,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[6],
-                            data: consultaAsistenciaMedValues[6],
+                            label: enfermedades[6],
+                            data: tasas[6][id],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -98,8 +97,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[7],
-                            data: consultaAsistenciaMedValues[7],
+                            label: enfermedades[7],
+                            data: tasas[7][id],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -107,8 +106,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[8],
-                            data: consultaAsistenciaMedValues[8],
+                            label: enfermedades[8],
+                            data: tasas[8][id],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -116,48 +115,15 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[9],
-                            data: consultaAsistenciaMedValues[9],
+                            label: enfermedades[9],
+                            data: tasas[9][id],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
                             pointRadius: 5,
                             tension: 0.1
                         },
-                        {
-                            label: consultaAsistenciaMed[10],
-                            data: consultaAsistenciaMedValues[10],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },
-                        {
-                            label: consultaAsistenciaMed[11],
-                            data: consultaAsistenciaMedValues[11],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },{
-                            label: consultaAsistenciaMed[12],
-                            data: consultaAsistenciaMedValues[12],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },{
-                            label: consultaAsistenciaMed[13],
-                            data: consultaAsistenciaMedValues[13],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },
+                        
                     ]
                 },
                 options: {
@@ -187,40 +153,53 @@
             });
         }
 
-        function crearGrafico(){
+        function crearGrafico(id){
                 fetch('/Data/pjson.json')
                     .then(response => response.json())
                     .then(data => {
-                        const years = []
                         
+                        const years = []
                         for (const year in data["Años"]) {
-                            if (data["Años"][year] < 2012){
-                            years.push(data["Años"][year]);
+                            if (data["Años"][year] >= 2009){
+                                years.push(data["Años"][year]);
                             }
                         }
-
-                        const consultaAsistenciaMed = [];
-                        const consultaAsistenciaMedValues = [];
-                        fetch('/Data/p8json.json')
+                        
+                        fetch('/Data/p9json.json')
                             .then(response => response.json())
                             .then(data => {
-                            
-                                for (const personal of   Object.keys(data["Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio "])) {
-                                    consultaAsistenciaMed.push(personal.toString());
-                                }
-
-                                for (const personalValues of Object.values(data["Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio "])) {
-                                    consultaAsistenciaMedValues.push(personalValues);
-                                }
-
                                 
-                                graph2(ctx, years, consultaAsistenciaMed, consultaAsistenciaMedValues);
+                                const enfermedades = []
+                                for (const obj of Object.values(data)){
+                                    if(enfermedades.indexOf(obj["Enfermedades"]) != -1) continue;
+                                    enfermedades.push(obj["Enfermedades"]);
+                                }
+
+                                const tasas = []
+
+                                for(const enfermedad of enfermedades){
+                                    const tasasMasculinas = []
+                                    const tasasFemeninas = []
+                                    const tasasAmbos = []
+                                    for (const obj of Object.values(data)){
+                                        if(obj["Enfermedades"] == enfermedad){
+                                            tasasMasculinas.push(obj["Tasas masculinas "]);
+                                            tasasFemeninas.push(obj["Tasas femeninas"]);
+                                            tasasAmbos.push(obj["Ambos sexos"]);    
+                                        }
+                                    }
+                                    console.log(tasasMasculinas.length);
+                                    tasasMasculinas.reverse();
+                                    tasasFemeninas.reverse();
+                                    tasasAmbos.reverse();
+                                    tasas.push([tasasMasculinas, tasasFemeninas, tasasAmbos]);
+                                }
+                                console.log(tasas[0][0])
+                                graph2(ctx, years, enfermedades, tasas, id);
                             })
                             .catch(error => {
                                 console.error("error al cargar el Json " + error)
-                    
                         });
-                        
                     })
                     .catch(error => {
                         console.error("error al cargar el Json " + error)
@@ -228,7 +207,7 @@
             }
         
 
-        crearGrafico();
+        crearGrafico(0);
 
     </script>
 

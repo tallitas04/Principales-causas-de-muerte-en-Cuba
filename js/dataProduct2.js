@@ -1,42 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gráficos de Personal Médico en Provincias de Cuba</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .contenedor {
-            width: 800px;
-            height: 600px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="contenedor">
-        <canvas id="investmentChart" width="400" height="200"></canvas>
-    </div>
-
-
-    <script>
-        var ctx = document.getElementById('investmentChart').getContext('2d');
+var ctx2 = document.getElementById('investmentChart').getContext('2d');
         var selectHtml = document.getElementById('selectProvincia');
-        let graph;
+        let graphT;
         
-        function graph2(ctx, years, consultaAsistenciaMed, consultaAsistenciaMedValues) {
-            if(graph) {
-                graph.destroy();
+        function graph2(ctx2, years, causasMuertes, causasMuertesValues) {
+            if(graphT) {
+                graphT.destroy();
             }
 
-            graph = new Chart(ctx, {
+            graphT = new Chart(ctx2, {
                 type: 'line',
                 data: {
                     labels: years,
                     datasets: [
                         {   
-                            label: consultaAsistenciaMed[0],
-                            data: consultaAsistenciaMedValues[0],
+                            label: causasMuertes[0],
+                            data: causasMuertesValues[0],
                             backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                             borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                             borderWidth: 1,
@@ -44,8 +22,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[1],
-                            data: consultaAsistenciaMedValues[1],
+                            label: causasMuertes[1],
+                            data: causasMuertesValues[1],
                             backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -53,8 +31,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[2],
-                            data: consultaAsistenciaMedValues[2],
+                            label: causasMuertes[2],
+                            data: causasMuertesValues[2],
                             backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -62,8 +40,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[3],
-                            data: consultaAsistenciaMedValues[3],
+                            label: causasMuertes[3],
+                            data: causasMuertesValues[3],
                             backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -71,8 +49,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[4],
-                            data: consultaAsistenciaMedValues[4],
+                            label: causasMuertes[4],
+                            data: causasMuertesValues[4],
                             backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
                             borderWidth: 1,
@@ -80,8 +58,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[5],
-                            data: consultaAsistenciaMedValues[5],
+                            label: causasMuertes[5],
+                            data: causasMuertesValues[5],
                             backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
                             borderWidth: 1,
@@ -89,8 +67,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[6],
-                            data: consultaAsistenciaMedValues[6],
+                            label: causasMuertes[6],
+                            data: causasMuertesValues[6],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -98,8 +76,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[7],
-                            data: consultaAsistenciaMedValues[7],
+                            label: causasMuertes[7],
+                            data: causasMuertesValues[7],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -107,8 +85,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[8],
-                            data: consultaAsistenciaMedValues[8],
+                            label: causasMuertes[8],
+                            data: causasMuertesValues[8],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -116,42 +94,8 @@
                             tension: 0.1
                         },
                         {
-                            label: consultaAsistenciaMed[9],
-                            data: consultaAsistenciaMedValues[9],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },
-                        {
-                            label: consultaAsistenciaMed[10],
-                            data: consultaAsistenciaMedValues[10],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },
-                        {
-                            label: consultaAsistenciaMed[11],
-                            data: consultaAsistenciaMedValues[11],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },{
-                            label: consultaAsistenciaMed[12],
-                            data: consultaAsistenciaMedValues[12],
-                            backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
-                            borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
-                            borderWidth: 1,
-                            pointRadius: 5,
-                            tension: 0.1
-                        },{
-                            label: consultaAsistenciaMed[13],
-                            data: consultaAsistenciaMedValues[13],
+                            label: causasMuertes[9],
+                            data: causasMuertesValues[9],
                             backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                             borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                             borderWidth: 1,
@@ -180,7 +124,7 @@
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio [1985-2011].'
+                            text: 'Tasas_de_las_principales_causas_de_muertes [2000-2022].'
                         }
                     }
                 }    
@@ -194,27 +138,27 @@
                         const years = []
                         
                         for (const year in data["Años"]) {
-                            if (data["Años"][year] < 2012){
+                            if (data["Años"][year] > 1999){
                             years.push(data["Años"][year]);
                             }
                         }
 
-                        const consultaAsistenciaMed = [];
-                        const consultaAsistenciaMedValues = [];
-                        fetch('/Data/p8json.json')
+                        const causasMuertes = [];
+                        const causasMuertesValues = [];
+                        fetch('/Data/p6json.json')
                             .then(response => response.json())
                             .then(data => {
                             
-                                for (const personal of   Object.keys(data["Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio "])) {
-                                    consultaAsistenciaMed.push(personal.toString());
+                                for (const personal of   Object.keys(data["Tasas_de_las_principales_causas_de_muertes"])) {
+                                    causasMuertes.push(personal.toString());
                                 }
 
-                                for (const personalValues of Object.values(data["Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio "])) {
-                                    consultaAsistenciaMedValues.push(personalValues);
+                                for (const personalValues of Object.values(data["Tasas_de_las_principales_causas_de_muertes"])) {
+                                    causasMuertesValues.push(personalValues);
                                 }
 
                                 
-                                graph2(ctx, years, consultaAsistenciaMed, consultaAsistenciaMedValues);
+                                graph2(ctx2, years, causasMuertes, causasMuertesValues);
                             })
                             .catch(error => {
                                 console.error("error al cargar el Json " + error)
@@ -229,9 +173,3 @@
         
 
         crearGrafico();
-
-    </script>
-
-</body>
-</html>
-
