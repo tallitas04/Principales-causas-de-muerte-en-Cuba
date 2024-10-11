@@ -184,7 +184,7 @@ function graph9(ctx7, years, organos, tasas, id) {
 }
 
 function crearGrafico(id){
-        fetch('/Data/pjson.json')
+        fetch('../Data/pjson.json')
             .then(response => response.json())
             .then(data => {
                 
@@ -195,7 +195,7 @@ function crearGrafico(id){
                     }
                 }
                 
-                fetch('/Data/p14json.json')
+                fetch('../Data/p14json.json')
                     .then(response => response.json())
                     .then(data => {
                         const organos = []

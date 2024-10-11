@@ -176,7 +176,7 @@ function graph4(ctx, years, consulta, consultaValues) {
 }
 
 function crearGrafico3(){
-        fetch('/Data/pjson.json')
+        fetch('../Data/pjson.json')
             .then(response => response.json())
             .then(data => {
                 const years = []
@@ -189,7 +189,7 @@ function crearGrafico3(){
 
                 const consulta = [];
                 const consultaValues = [];
-                fetch('/Data/p3json.json')
+                fetch('../Data/p3json.json')
                     .then(response => response.json())
                     .then(data => {
                     
