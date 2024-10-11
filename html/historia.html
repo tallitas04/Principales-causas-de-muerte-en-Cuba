@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia</title>
     <link rel="stylesheet" href="/css/historia.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <header class = 'header'>
@@ -13,7 +15,7 @@
     <main class = 'main'>
         <section class = 'main_section'>
             <div class = 'section_info'>
-                <h2 class = 'section_title'>ABCD</h2>
+                <h2 class = 'section_title'>Covid-19 en Cuba: "Resiliencia, Ciencia y Estrategias en Tiempos de Crisis"</h2>
 
                 <p class = 'section_paragraph'>
                     La pandemia de COVID-19, provocada por el virus SARS-CoV-2, se ha convertido
@@ -24,7 +26,7 @@
                     desató una serie de eventos que reconfiguraron la atención sanitaria. 
                     Las primeras medidas tomadas por el gobierno cubano incluyeron el cierre de fronteras, 
                     el aislamiento social, y la promoción del uso de mascarillas.
-                    A pesar de estas medidas, Cuba experimentó varios picos en las cifras de contagios y muertes
+                    A pesar de estas medidas, Cuba experimentó varios picos en las cifras de contagios y muertes.
 
                 
                 </p>
@@ -36,13 +38,19 @@
         </section>
         <section class = 'main_section'>
             <div class = 'section_info'>
-                <h2 class = 'section_title'>ABCD</h2>
+                <h2 class = 'section_title'>Otras enfermedades que golpean la salud de nuestro país.</h2>
 
                 <p class = 'section_paragraph'>
-                    Antes de la llegada del COVID-19, las principales causas de muerte en Cuba eran :
-
-
+                    Antes de la llegada del COVID-19, las principales causas de muerte en Cuba eran principalmente las enfermedades
+                    del corazón que son un grupo de trastornos que afectan al corazón y los vasos sanguíneos.
+                    Tumores malignos, también conocidos como cáncer, Influenza y neumonía y otras más que se verán en la siguiente gráfica:
                 </p>
+
+                
+            </div>
+
+            <div class="grafica__container grafica__container--desktop">
+                <canvas class="grafica" id="investmentChart2"></canvas>
             </div>
         </section>
 
@@ -51,27 +59,34 @@
         </section>
         <section class = 'main_section'>
             <div class = 'section_info'>
-                <h2 class = 'section_title'>ABCD</h2>
+                <h2 class = 'section_title'>"Ciencia, Innovación y Autosuficiencia en Tiempos de Pandemia"</h2>
 
                 <p class = 'section_paragraph'>
-                    A lo largo de la pandemia, particularmente en los picos de contagio durante 2021 y 2022, 
-                    el COVID-19 se convirtió rápidamente en una de las principales causas de muerte en el país.
-                    Según datos del Ministerio de Salud Pública de Cuba, el impacto del COVID-19 en la mortalidad
-                    se detalla de la siguiente manera:
-                    
-                </p>
-            </div>
-        </section>
+                    Cuando el COVID‑19 llegó a Cuba, el Gobierno movilizó de inmediato a su extenso sistema
+                    de salud pública y a su industria de biotecnología líder a nivel mundial. Esta acción decisiva 
+                    ha permitido que Cuba mantenga niveles muy bajos de contagios y mortalidad.
+                    Cuba tiene una larga trayectoria en el desarrollo de vacunas y biotecnología, con el Instituto Finlay 
+                    y el Centro de Ingeniería Genética y Biotecnología (CIGB) como referentes en la región. Gracias a esta experiencia,
+                    desde el inicio de la pandemia de COVID-19, en marzo de 2020, la isla se puso como objetivo desarrollar
+                    vacunas propias. Cuba desarrolló y produjo la primera vacuna anticovid en América Latina. Fue el primer país en inmunizar 
+                    a su población pediátrica entre dos y 18 años y ello marcó un hito no solo para la nación del Caribe, sino 
+                    para el mundo.
+                    Cuba produjo cinco candidatos vacunales, siendo los más importantes Soberana 02, Soberana Plus y Abdala.
+                    Soberana 02 alcanzó una eficacia del 62% con dos dosis, que aumentó al 91,2% al añadir la dosis de refuerzo de Soberana
+                    Plus. Abdala mostró una eficacia del 92,28% tras tres dosis. Ambas vacunas fueron bien toleradas, con pocos efectos
+                    adversos y generaron una fuerte respuesta inmune. 
+                    as vacunas cubanas no solo fueron aplicadas en su territorio, sino que también despertaron interés internacional.
+                    Venezuela, Irán, Vietnam y Nicaragua adquirieron vacunas cubanas, y varios países africanos y latinoamericanos mostraron 
+                    interés en colaborar con Cuba para la producción de vacunas. Además, la Organización Mundial de la Salud (OMS) inició
+                    un proceso de evaluación para autorizar el uso de emergencia de las vacunas cubanas, lo que potencialmente podría 
+                    aumentar su distribución a nivel global.
+                    La producción de vacunas contra la COVID-19 reafirma la posición de Cuba como un líder en biotecnología en América Latina
+                    y el Caribe, y destaca el impacto de las políticas de salud pública cubanas centradas en la ciencia y la autosuficiencia. 
+                    Este esfuerzo no solo ha contribuido a mitigar el impacto de la pandemia en la isla, sino que también ha reforzado la cooperación
+                    médica internacional de Cuba, un país con una fuerte tradición en enviar médicos y expertos en salud a otras naciones en momentos
+                    de crisis.
 
-        <section class = 'main_section'>
-            <a href="http://127.0.0.1:5500/index.html" class = 'section_link'>Volver</a>
-        </section>
-        <section class = 'main_section'>
-            <div class = 'section_info'>
-                <h2 class = 'section_title'>ABCD</h2>
 
-                <p class = 'section_paragraph'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio delectus officiis soluta nisi, voluptatem perspiciatis tempora iure, modi repellat libero aliquid maxime laboriosam. Placeat perferendis facilis recusandae aperiam, fugiat laboriosam?
                 </p>
             </div>
         </section>
@@ -81,6 +96,7 @@
         </section>
     
     </main>
+    <script src="../js/dataProduct2.js"></script>
     
 </body>
 </html>

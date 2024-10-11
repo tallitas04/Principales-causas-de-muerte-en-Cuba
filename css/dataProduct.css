@@ -73,6 +73,7 @@ body{
 }
 
 .select {
+    text-align: center;
     font-weight: bold;
     background-color: rgb(255, 60, 60);
     color: white;
