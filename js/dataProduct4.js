@@ -69,7 +69,8 @@ function graph2(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Tasas_de_las_principales_causas_de_muertes [2000-2022].'
+                    text: 'Habitantes por medico y estomatologo [1985-2022].'
+
                 }
             }
         }    
