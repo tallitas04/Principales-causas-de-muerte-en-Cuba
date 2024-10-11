@@ -131,6 +131,11 @@ body{
 
 }
 
+.btn--volver {
+    margin-bottom: 30px;
+    padding: 10px 30px;
+}
+
 @media screen and (max-width: 500px){
     .main_section{
         text-align: center;

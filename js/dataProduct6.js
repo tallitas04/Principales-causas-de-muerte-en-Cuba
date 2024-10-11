@@ -1,28 +1,28 @@
-var ctx2 = document.getElementById('investmentChart2').getContext('2d');
-let graphaux;
+var ctx6 = document.getElementById('investmentChart6').getContext('2d');
+let graph8;
 
-function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
-    if(graphaux) {
-        graphaux.destroy();
-    }
+function graph7(ctx6, years, enfermedades, tasas, id) {
+        if(graph8) {
+        graph8.destroy();
+        }
 
-    graphaux = new Chart(ctx2, {
+        graph8 = new Chart(ctx6, {
         type: 'line',
         data: {
             labels: years,
             datasets: [
                 {   
-                    label: causasMuertes[0],
-                    data: causasMuertesValues[0],
+                    label: enfermedades[0],
+                    data: tasas[0][id],
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
                     pointRadius: 2,
                     tension: 0.1
                 },
-                {
-                    label: causasMuertes[1],
-                    data: causasMuertesValues[1],
+                {   
+                    label: enfermedades[1],
+                    data: tasas[1][id],
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
@@ -30,8 +30,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[2],
-                    data: causasMuertesValues[2],
+                    label: enfermedades[2],
+                    data: tasas[2][id],
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
@@ -39,8 +39,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[3],
-                    data: causasMuertesValues[3],
+                    label: enfermedades[3],
+                    data: tasas[3][id],
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
@@ -48,8 +48,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[4],
-                    data: causasMuertesValues[4],
+                    label: enfermedades[4],
+                    data: tasas[4][id],
                     backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
                     borderWidth: 1,
@@ -57,8 +57,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[5],
-                    data: causasMuertesValues[5],
+                    label: enfermedades[5],
+                    data: tasas[5][id],
                     backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
@@ -66,8 +66,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[6],
-                    data: causasMuertesValues[6],
+                    label: enfermedades[6],
+                    data: tasas[6][id],
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
@@ -75,8 +75,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[7],
-                    data: causasMuertesValues[7],
+                    label: enfermedades[7],
+                    data: tasas[7][id],
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
@@ -84,8 +84,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[8],
-                    data: causasMuertesValues[8],
+                    label: enfermedades[8],
+                    data: tasas[8][id],
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
@@ -93,14 +93,15 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     tension: 0.1
                 },
                 {
-                    label: causasMuertes[9],
-                    data: causasMuertesValues[9],
+                    label: enfermedades[9],
+                    data: tasas[9][id],
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
                     pointRadius: 5,
                     tension: 0.1
                 },
+                
             ]
         },
         options: {
@@ -123,47 +124,59 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Tasas_de_las_principales_causas_de_muertes [2000-2022].'
+                    text: 'Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio [1985-2011].'
                 }
             }
         }    
-    });
-}
+        });
+        }
 
-function crearGrafico2(){
-        fetch('/Data/pjson.json')
-            .then(response => response.json())
-            .then(data => {
-                const years = []
-                
-                for (const year in data["Años"]) {
-                    if (data["Años"][year] > 1999){
-                    years.push(data["Años"][year]);
+function crearGrafico(id){
+    fetch('/Data/pjson.json')
+        .then(response => response.json())
+        .then(data => {
+            
+            const years = []
+            for (const year in data["Años"]) {
+                    if (data["Años"][year] >= 2009){
+                        years.push(data["Años"][year]);
                     }
                 }
-
-                const causasMuertes = [];
-                const causasMuertesValues = [];
-                fetch('/Data/p6json.json')
+                
+                fetch('/Data/p9json.json')
                     .then(response => response.json())
                     .then(data => {
-                    
-                        for (const personal of   Object.keys(data["Tasas_de_las_principales_causas_de_muertes"])) {
-                            causasMuertes.push(personal.toString());
-                        }
-
-                        for (const personalValues of Object.values(data["Tasas_de_las_principales_causas_de_muertes"])) {
-                            causasMuertesValues.push(personalValues);
-                        }
-
                         
-                        graph3(ctx2, years, causasMuertes, causasMuertesValues);
+                        const enfermedades = []
+                        for (const obj of Object.values(data)){
+                            if(enfermedades.indexOf(obj["Enfermedades"]) != -1) continue;
+                            enfermedades.push(obj["Enfermedades"]);
+                        }
+
+                        const tasas = []
+
+                        for(const enfermedad of enfermedades){
+                            const tasasMasculinas = []
+                            const tasasFemeninas = []
+                            const tasasAmbos = []
+                            for (const obj of Object.values(data)){
+                                if(obj["Enfermedades"] == enfermedad){
+                                    tasasMasculinas.push(obj["Tasas masculinas "]);
+                                    tasasFemeninas.push(obj["Tasas femeninas"]);
+                                    tasasAmbos.push(obj["Ambos sexos"]);    
+                                }
+                            }
+                            console.log(tasasMasculinas.length);
+                            tasasMasculinas.reverse();
+                            tasasFemeninas.reverse();
+                            tasasAmbos.reverse();
+                            tasas.push([tasasMasculinas, tasasFemeninas, tasasAmbos]);
+                        }
+                        graph7(ctx6, years, enfermedades, tasas, id);
                     })
                     .catch(error => {
                         console.error("error al cargar el Json " + error)
-            
                 });
-                
             })
             .catch(error => {
                 console.error("error al cargar el Json " + error)
@@ -171,4 +184,4 @@ function crearGrafico2(){
     }
 
 
-crearGrafico2();
+crearGrafico(0);
