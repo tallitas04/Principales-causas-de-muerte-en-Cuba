@@ -131,7 +131,7 @@ function graph6(ctx5, years, consultaAsistenciaMed, consultaAsistenciaMedValues)
 }
 
 function crearGrafico6(){
-        fetch('/Data/pjson.json')
+        fetch('../Data/pjson.json')
             .then(response => response.json())
             .then(data => {
                 const years = []
@@ -144,7 +144,7 @@ function crearGrafico6(){
 
                 const consultaAsistenciaMed = [];
                 const consultaAsistenciaMedValues = [];
-                fetch('/Data/p8json.json')
+                fetch('../Data/p8json.json')
                     .then(response => response.json())
                     .then(data => {
                     

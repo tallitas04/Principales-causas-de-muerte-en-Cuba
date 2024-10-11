@@ -196,7 +196,7 @@ function graph23(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
 
 function crearGrafico5(id){
     
-        fetch('/Data/pjson.json')
+        fetch('../Data/pjson.json')
             .then(response => response.json())
             .then(data => {
                 const years = []
@@ -209,7 +209,7 @@ function crearGrafico5(id){
 
                 const habitantesMedEst = [];
                 const habitantesMedEstValues = [];
-                fetch('/Data/p7json.json')
+                fetch('../Data/p7json.json')
                     .then(response => response.json())
                     .then(data => {
                     

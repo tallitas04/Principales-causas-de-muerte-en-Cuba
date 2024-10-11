@@ -131,7 +131,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
 }
 
 function crearGrafico2(){
-        fetch('/Data/pjson.json')
+        fetch('../Data/pjson.json')
             .then(response => response.json())
             .then(data => {
                 const years = []
@@ -144,7 +144,7 @@ function crearGrafico2(){
 
                 const causasMuertes = [];
                 const causasMuertesValues = [];
-                fetch('/Data/p6json.json')
+                fetch('../Data/p6json.json')
                     .then(response => response.json())
                     .then(data => {
                     
