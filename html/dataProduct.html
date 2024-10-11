@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Product</title>
+    <link rel="stylesheet" href="/css/dataProduct.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <header class='header'>
+        <h1 class='header_title'>La salud y la muerte</h1>
+    </header>
+
+    <main class='main'>
+
+        <section class='main_section'>
+
+            <div class='section_info'>
+                <h2 class='section_title'>Análisis del Personal Facultativo del Ministerio de Salud Pública
+                </h2>
+
+                <p class='section_paragraph'>
+
+                    El análisis de estos datos es fundamental para comprender la disponibilidad y distribución de
+                    recursos humanos en salud en cada región. Al estudiar las variaciones a lo largo del tiempo, se
+                    pueden identificar patrones importantes que reflejan la respuesta del sistema de salud a las
+                    necesidades de la población y los cambios en las políticas públicas.
+
+                    Además, esta información es clave para proyectos de investigación sobre las principales causas de
+                    muerte en Cuba, ya que la cantidad y especialización del personal médico pueden influir directamente
+                    en la capacidad del sistema para prevenir y tratar enfermedades.
+                </p>
+
+            </div>
+
+
+            <div class="grafica__container grafica__container--desktop">
+                <select name="select" id="selectProvincia" class="select">
+                    <option value="0">Pinar del Río</option>
+                    <option value="1">Artemisa</option>
+                    <option value="2" selected>La Habana</option>
+                    <option value="3">Ciudad de La Habana</option>
+                    <option value="4">Mayabeque</option>
+                    <option value="5">Matanzas</option>
+                    <option value="6">Villa Clara</option>
+                    <option value="7">Cienfuegos</option>
+                    <option value="8">Sancti Spíritus</option>
+                    <option value="9">Ciego de Ávila</option>
+                    <option value="10">Camagüey</option>
+                    <option value="11">Las Tunas</option>
+                    <option value="12">Holguín</option>
+                    <option value="13">Granma</option>
+                    <option value="14">Santiago de Cuba</option>
+                    <option value="15">Guantánamo</option>
+                    <option value="16">Isla de la Juventud</option>
+                    <option value="17">Toda Cuba</option>
+                </select>
+                <canvas class="grafica" id="investmentChart"></canvas>
+            </div>
+
+        </section>
+
+        <section class='main_section'>
+            <div class='section_info'>
+                <h2 class='section_title'></h2>
+
+                <p class='section_paragraph'>
+                    Esta tabla muestra la evolución de las tasas de las principales causas de muerte en
+                    Cuba entre los años 2000 y 2022. Las enfermedades como los tumores malignos, influenzas,
+                    enfermedades cerebrovasculares, y otras causas claves están representadas de manera visual
+                    para resaltar tendencias importantes en la mortalidad a lo largo del tiempo.
+                    Los tumores malignos, la influenza y neumonía fueron las entidades que más incrementaron el
+                    número de fallecidos en relación con el año anterior
+
+
+                </p>
+            </div>
+
+            <div class="grafica__container grafica__container--desktop">
+                <canvas class="grafica" id="investmentChart2"></canvas>
+            </div>
+        </section>
+
+        <section class='main_section'>
+            <div class='section_info'>
+                <h2 class='section_title'></h2>
+                <p class='section_paragraph'>
+                    El gráfico ofrece una visión clara del crecimiento y las fluctuaciones en el número de profesionales
+                    en diferentes áreas, destacando cómo ciertos sectores como hospitales generales y otras unidades de
+                    asistencia médica han mostrado una evolución notable a lo largo de los años. Este tipo de análisis
+                    es
+                    fundamental para comprender los recursos humanos disponibles en el sector de salud en Cuba y evaluar
+                    la capacidad del sistema para atender las necesidades de la población en diferentes contextos, desde
+                    hospitales urbanos hasta servicios médicos rurales. Además, permite a los investigadores y
+                    responsables
+                    de políticas públicas identificar las tendencias clave en la distribución de personal, lo que podría
+                    influir
+                    en las decisiones sobre dónde asignar recursos adicionales o realizar mejoras. Al analizar las
+                    tendencias
+                    en las distintas áreas, se puede ver cómo el personal en hospitales generales y policlínicos ha
+                    mostrado un
+                    crecimiento sostenido, mientras que otras áreas han tenido fluctuaciones más pronunciadas,
+                    reflejando cambios
+                    en las prioridades o en las demandas de servicios médicos a lo largo de los años.
+
+
+                </p>
+
+
+            </div>
+            <div class="grafica__container grafica__container--desktop">
+                <canvas class="grafica" id="investmentChart3"></canvas>
+            </div>
+        </section>
+
+
+
+        <section class='main_section'>
+            <div class='section_info'>
+                <h2 class='section_title'></h2>
+                <p class='section_paragraph'>
+
+
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore veniam rerum cum quas ut sint in
+                    itaque voluptas nobis neque, possimus totam modi nulla incidunt voluptatibus voluptatem, voluptatum
+                    officiis est accusamus at sit numquam tenetur eaque enim? Veniam dolorem aspernatur consequuntur
+                    pariatur nulla illo ratione quas, cumque ad saepe est voluptates ducimus placeat fuga, sint minus,
+                    aliquam doloremque odio culpa! Eos similique quibusdam rerum incidunt dolore quidem non minus atque.
+                    Voluptates cum ad nemo doloremque molestias molestiae tenetur dignissimos earum dolorum officia
+                    voluptatem odio magnam tempore nobis ipsam eos quia dicta aperiam quo veniam, suscipit animi
+                    repellat. Repellat, nulla nisi?
+                </p>
+
+
+            </div>
+            <div class="grafica__container grafica__container--desktop">
+                <canvas class="grafica" id="investmentChart4"></canvas>
+            </div>
+        </section>
+
+        <section class='main_section'>
+            <div class='section_info'>
+                <h2 class='section_title'></h2>
+                <p class='section_paragraph'>
+                    Este gráfico es fundamental para entender cómo se distribuye el esfuerzo en
+                    el sistema de salud, ya que las consultas en hospitales generales y clínico-quirúrgicos
+                    representan una porción importante de la atención de urgencias, mientras que las unidades
+                    rurales y maternidades presentan una demanda relativamente más estable, pero no menos
+                    importante. La capacidad de respuesta de los cuerpos de guardia es un indicador directo
+                    de la capacidad del sistema de salud para gestionar casos de emergencia, particularmente
+                    en momentos de presión por eventos externos, como desastres naturales o pandemias.
+
+                </p>
+            </div>
+            <div class="grafica__container grafica__container--desktop">
+                <canvas class="grafica" id="investmentChart5"></canvas>
+            </div>
+        </section>
+
+        <section class='main_section'>
+            <div class='section_info'>
+                <a href='../index.html' class='section_link'>Volver</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/datatProduct.js"></script>
+    <script src="../js/dataProduct2.js"></script>
+    <script src="../js/dataProduct3.js"></script>
+    <script src="../js/dataProduct4.js"></script>
+    <script src="../js/dataProduct5.js"></script>
+</body>
+
+</html>
