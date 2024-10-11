@@ -15,6 +15,7 @@
 <body>
 
     <div class="contenedor">
+       
         <canvas id="investmentChart" width="400" height="200"></canvas>
     </div>
 
@@ -194,7 +195,6 @@
                                     tasasAmbos.reverse();
                                     tasas.push([tasasMasculinas, tasasFemeninas, tasasAmbos]);
                                 }
-                                console.log(tasas[0][0])
                                 graph2(ctx, years, enfermedades, tasas, id);
                             })
                             .catch(error => {
