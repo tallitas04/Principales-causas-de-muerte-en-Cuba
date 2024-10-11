@@ -1,3 +1,4 @@
+// Análisis del Personal Facultativo del Ministerio de Salud Pública
 var ctx = document.getElementById('investmentChart').getContext('2d');
 var selectHtml = document.getElementById('selectProvincia');
 let graph;
@@ -269,8 +270,6 @@ function crearGrafico(id, idProvincia){
         });
     }
 };
-
-// crearGrafico(2, 2);
 
 selectHtml.addEventListener('change', (event) => {
     let idProvincia;
