@@ -180,7 +180,8 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
     });
 }
 
-function crearGrafico(id, idProvincia){
+function crearGraficoAux(id, idProvincia){
+    console.log("f " + id);
     if(id != 17){
         fetch('../Data/p5json.json')
         .then(response => response.json())
@@ -225,7 +226,7 @@ function crearGrafico(id, idProvincia){
                     if(id == 2) idProvincia--;
                     personalSaludValues.push(aux)
                 }
-
+                // console.log("g1");
                 graph1(ctx, years, personalSalud, personalSaludValues);
                             
             })
@@ -256,7 +257,7 @@ function crearGrafico(id, idProvincia){
                             personalSaludValues.push(personalValues);
                         }
 
-                        
+                        // console.log("g2");
                         graph2(ctx, years, personalSalud, personalSaludValues);
                     })
                     .catch(error => {
@@ -281,8 +282,8 @@ selectHtml.addEventListener('change', (event) => {
             break;
         }
     }
-    console.log(id);
-    crearGrafico(id, idProvincia);
+    // console.log(id);
+    crearGraficoAux(id, idProvincia);
 });
 
-crearGrafico(2, 2);
+crearGraficoAux(2, 2);

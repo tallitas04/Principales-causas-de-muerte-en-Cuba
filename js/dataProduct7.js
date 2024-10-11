@@ -204,7 +204,7 @@ function crearGrafico(id){
                             organos.push(obj["Localozaciones"]);
                         }
 
-                        console.log(organos.length);
+                        // console.log(organos.length);
                         
                         const tasas = []
 
