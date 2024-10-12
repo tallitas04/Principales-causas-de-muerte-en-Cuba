@@ -12,7 +12,7 @@ body{
 .header{
     padding: 25px;
     background: rgb(255, 60, 60);
-    background: linear-gradient(90deg, rgba(255,60,60,1) 0%, rgba(255,50,50,1) 33%, rgba(255,45,45,1) 66%, rgba(255,40,40,1) 100%);
+    background: linear-gradient(90deg, rgba(255,75,75,1) 0%, rgba(255,60,60,1) 33%, rgba(255,45,45,1) 66%, rgba(255,35,35,1) 100%);
     text-align: center;
     color: #fff;
     font-family: 'Popins',sans-serif;

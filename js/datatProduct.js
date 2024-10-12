@@ -7,7 +7,6 @@ function graph1(ctx, years, personalSalud, personalSaludValues) {
     if(graph) {
         graph.destroy();
     }
-
     graph = new Chart(ctx, {
         type: 'line',
         data: {
@@ -19,7 +18,7 @@ function graph1(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -28,7 +27,7 @@ function graph1(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -37,7 +36,7 @@ function graph1(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -46,7 +45,7 @@ function graph1(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
             ]
@@ -71,18 +70,24 @@ function graph1(ctx, years, personalSalud, personalSaludValues) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Personal facultativo del ministerio de salud publica [2006-2022]'
+                    text: 'Personal facultativo del ministerio de salud publica [2006-2022]',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
                 }
             }
         }    
     });
 }
 
-function graph2(ctx, years, personalSalud, personalSaludValues) {
+function graph10(ctx, years, personalSalud, personalSaludValues) {
     if(graph) {
         graph.destroy();
     }
-
+    
+    console.log(years);
+    years.push(2022);
+    console.log(years)
     graph = new Chart(ctx, {
         type: 'line',
         data: {
@@ -94,7 +99,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -103,7 +108,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -112,7 +117,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -121,7 +126,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -130,7 +135,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -139,7 +144,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -148,7 +153,7 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
             ]
@@ -173,7 +178,10 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Personal facultativo del Ministerio de Salud Pública [1985-2022].'
+                    text: 'Personal facultativo del Ministerio de Salud Pública de Cuba [1985-2022].',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
                 }
             }
         }    
@@ -181,7 +189,6 @@ function graph2(ctx, years, personalSalud, personalSaludValues) {
 }
 
 function crearGraficoAux(id, idProvincia){
-    console.log("f " + id);
     if(id != 17){
         fetch('../Data/p5json.json')
         .then(response => response.json())
@@ -242,6 +249,7 @@ function crearGraficoAux(id, idProvincia){
                 for (const year in data["Años"]) {
                     years.push(data["Años"][year]);
                 }
+                console.log(years);
 
                 const personalSalud = [];
                 const personalSaludValues = [];
@@ -258,7 +266,7 @@ function crearGraficoAux(id, idProvincia){
                         }
 
                         // console.log("g2");
-                        graph2(ctx, years, personalSalud, personalSaludValues);
+                        graph10(ctx, years, personalSalud, personalSaludValues);
                     })
                     .catch(error => {
                         console.error("error al cargar el Json " + error)

@@ -18,7 +18,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {   
@@ -27,7 +27,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -36,7 +36,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -45,7 +45,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },{   
                     label: organos[4],
@@ -53,7 +53,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {   
@@ -62,7 +62,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -71,7 +71,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -80,7 +80,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },{   
                     label: organos[8],
@@ -88,7 +88,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {   
@@ -97,7 +97,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -106,7 +106,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -115,7 +115,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {   
@@ -124,7 +124,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -133,7 +133,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -142,7 +142,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {   
@@ -151,7 +151,7 @@ function graph9(ctx7, years, organos, tasas, id) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
             ]
@@ -176,7 +176,10 @@ function graph9(ctx7, years, organos, tasas, id) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Difuciones por sexo [2009-2022].'
+                    text: 'Difuciones por sexo [2009-2022].',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
                 }
             }
         }    

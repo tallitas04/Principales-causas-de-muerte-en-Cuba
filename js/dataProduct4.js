@@ -18,7 +18,7 @@ function graph2(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -27,7 +27,7 @@ function graph2(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -36,7 +36,7 @@ function graph2(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -45,7 +45,7 @@ function graph2(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
             ]
@@ -70,7 +70,10 @@ function graph2(ctx4, years, habitantesMedEst, habitantesMedEstValues) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Habitantes por medico y estomatologo [1985-2022].'
+                    text: 'Habitantes por medico y estomatologo [1985-2022].',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
 
                 }
             }

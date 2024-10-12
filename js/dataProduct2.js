@@ -17,7 +17,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -26,7 +26,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -35,7 +35,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -44,7 +44,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -53,7 +53,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -62,7 +62,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -71,7 +71,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -80,7 +80,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -89,7 +89,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -98,7 +98,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
             ]
@@ -123,7 +123,10 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Tasas_de_las_principales_causas_de_muertes [2000-2022].'
+                    text: 'Tasas_de_las_principales_causas_de_muertes [2000-2022].',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
                 }
             }
         }    

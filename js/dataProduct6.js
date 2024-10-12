@@ -1,4 +1,5 @@
 var ctx6 = document.getElementById('investmentChart6').getContext('2d');
+selectHtml4 = document.getElementById("select4");
 let graph8;
 
 function graph7(ctx6, years, enfermedades, tasas, id) {
@@ -17,7 +18,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de relleno azul claro
                     borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {   
@@ -26,7 +27,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(255, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -35,7 +36,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -44,7 +45,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -53,7 +54,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -62,7 +63,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(243, 99, 132, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(243, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -71,7 +72,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -80,7 +81,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -89,7 +90,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 {
@@ -98,7 +99,7 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
                     backgroundColor: 'rgba(203, 99, 32, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 32, 1)', // Borde rojo
                     borderWidth: 1,
-                    pointRadius: 5,
+                    pointRadius: 3,
                     tension: 0.1
                 },
                 
@@ -124,8 +125,11 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Consultas_en_cuerpos_de_guardia_de_asistencia_médica_por_unidades_de_servicio [1985-2011].'
-                }
+                    text: 'Causas de muertes por sexo [2009-2022].',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
+                },
             }
         }    
         });
@@ -182,6 +186,17 @@ function crearGrafico(id){
                 console.error("error al cargar el Json " + error)
         });
     }
+
+selectHtml4.addEventListener('change', (event)=>{
+    let id;
+    for (let i = 0; i < selectHtml4.options.length;i++){
+        if (selectHtml4.options[i].selected){
+            id = i;
+            break;
+        } 
+    }
+    crearGrafico(id)
+});
 
 
 crearGrafico(0);

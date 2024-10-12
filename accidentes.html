@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accidentes ocurridos por accidentes de transito </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .contenedor {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <canvas id="investmentChart9" width="400" height="200"></canvas>
+    </div>
+
+
+    <script>
+        var ctx9 = document.getElementById('investmentChart9').getContext('2d');
+let graph12;
+
+function graphAux9(ctx9, years, principalesViolaciones, accidentes) {
+    if(graph12) {
+        graph12.destroy();
+    }
+    
+    // console.log(residentes[0])
+    graph12 = new Chart(ctx9, {
+        type: 'pie',
+        data: {
+            labels: years,
+            datasets: [
+                {   
+                    label: principalesViolaciones,
+                    data: accidentes,
+                    backgroundColor: ['rgba(54, 162, 235, 0.2)', 'rgba(5, 162, 0, 0.2)', 'rgba(54, 62, 35, 0.2)'], // Color de relleno azul claro
+                    borderColor: 'rgba(54, 162, 235, 1)', // Borde azul
+                    borderWidth: 1,
+                    pointRadius: 3,
+                    tension: 0
+                },
+
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Cantidad de Accidentes'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Principales Violaciones'
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Accidentes ocurridos por violaciones del tránsito.',
+                    font: {
+                        size: 18, // Tamaño del título
+                    }
+                }
+            }
+        }    
+    });
+}
+
+function crearGraficoAux9(){
+        const personalSalud = [];
+        fetch('../Data/p13json.json')
+            .then(response => response.json())
+            .then(data => {
+
+                const years = [];
+                for (const year of Object.keys(data)){
+                    years.push(year);
+                }
+                const principalesViolaciones = years
+            
+
+                console.log(principalesViolaciones)
+                const accidentes = [];
+
+                for (const acc of Object.values(data)){
+                    accidentes.push(acc)
+                }
+
+                console.log(accidentes)
+                graphAux9(ctx9, years, principalesViolaciones, accidentes);
+            })
+            .catch(error => {
+                console.error("error al cargar el Json " + error)
+        });
+};
+
+
+crearGraficoAux9();
+        
+    </script>
+
+</body>
+</html>
+
