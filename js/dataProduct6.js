@@ -135,7 +135,8 @@ function graph7(ctx6, years, enfermedades, tasas, id) {
         });
         }
 
-function crearGrafico(id){
+function crearGraficoAux6(id){
+
     fetch('../Data/pjson.json')
         .then(response => response.json())
         .then(data => {
@@ -195,8 +196,8 @@ selectHtml4.addEventListener('change', (event)=>{
             break;
         } 
     }
-    crearGrafico(id)
+    crearGraficoAux6(id)
 });
 
 
-crearGrafico(0);
+crearGraficoAux6(0);
