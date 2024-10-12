@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .div {
+            height: 400px;
+            background-color: aquamarine;
+        }
+        canvas {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    "No respetar el derecho de vía", 
+                    "No atender el control del vehículo", 
+                    "Exceso de velocidad", 
+                    "No obedecer las luces del semáforo", 
+                    "Violaciones del peatón", 
+                    "Conducir bajo la ingesta de bebidas alcohólicas", 
+                    "Adelantamiento indebido", 
+                    "Maniobra de marcha atrás", 
+                    "Estacionamiento inadecuado", 
+                    "Violaciones de los conductores de ciclos", 
+                    "Animales sueltos", 
+                    "Desperfectos técnicos", 
+                    "Conductores que violan derecho del peatón", 
+                    "Transportación masiva", 
+                    "Otros"
+                ],
+                datasets: [{
+                    label: 'Accidentes',
+                    data: [
+                        2891, 2964, 859, 178, 488, 164, 570, 188, 28, 23, 301, 636, 13, 27, 518
+                    ],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
