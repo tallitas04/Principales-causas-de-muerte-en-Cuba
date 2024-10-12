@@ -7,7 +7,7 @@ function graphAux8(ctx8, years, residentes, provincia) {
         graph11.destroy();
     }
     if(provincia == "Toda Cuba"){
-        years.unshift(2006, 2007, 2008);
+        years.unshift(1980,1990,2000,2006, 2007, 2008);
     }
     // console.log(residentes[0])
     graph11 = new Chart(ctx8, {
@@ -68,7 +68,6 @@ function crearGraficoAux8(id, provincia){
                 }
             }
         
-            const personalSalud = [];
             fetch('../Data/p16json.json')
                 .then(response => response.json())
                 .then(data => {
