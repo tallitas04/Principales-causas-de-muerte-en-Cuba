@@ -76,7 +76,7 @@ function crearGraficoAux8(id, provincia){
                     for (const value of Object.values(data["Poblacion_residente_en_Cuba"])) {
                         residentes.push(value);                       
                     }
-                    // console.log(residentes[1])
+                    
                     graphAux8(ctx8, years, residentes[id], provincia);
                 })
                 .catch(error => {

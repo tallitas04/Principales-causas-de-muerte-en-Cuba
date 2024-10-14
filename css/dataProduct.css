@@ -83,6 +83,8 @@ body{
     align-items: start;
 }
 
+
+
 .grafica__container {
     display: flex;
     flex-direction: column;

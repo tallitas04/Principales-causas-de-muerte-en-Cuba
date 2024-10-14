@@ -176,7 +176,7 @@ function graph9(ctx7, years, organos, tasas, id) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Difuciones por sexo [2009-2022].',
+                    text: 'Defunciones por sexo [2009-2022].',
                     font: {
                         size: 18, // Tamaño del título
                     }
