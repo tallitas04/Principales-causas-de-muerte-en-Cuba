@@ -11,7 +11,7 @@ function graphAux8(ctx8, years, residentes, provincia) {
     }
     // console.log(residentes[0])
     graph11 = new Chart(ctx8, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: years,
             datasets: [

@@ -32,7 +32,7 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                 {
                     label: causasMuertes[2],
                     data: causasMuertesValues[2],
-                    backgroundColor: 'rgba(203, 99, 132, 0.2)', // Color de relleno rojo claro
+                    backgroundColor: 'rgba(255, 0, 0, 0.2)', // Color de relleno rojo claro
                     borderColor: 'rgba(203, 99, 132, 1)', // Borde rojo
                     borderWidth: 1,
                     pointRadius: 3,
@@ -41,8 +41,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                 {
                     label: causasMuertes[3],
                     data: causasMuertesValues[3],
-                    backgroundColor: 'rgba(203, 199, 132, 0.2)', // Color de relleno rojo claro
-                    borderColor: 'rgba(203, 199, 132, 1)', // Borde rojo
+                    backgroundColor: 'rgba(255, 0, 0)', // Color de relleno rojo claro
+                    borderColor: 'rgba(255, 0, 0)',
                     borderWidth: 1,
                     pointRadius: 3,
                     tension: 0.1
@@ -50,8 +50,8 @@ function graph3(ctx2, years, causasMuertes, causasMuertesValues) {
                 {
                     label: causasMuertes[4],
                     data: causasMuertesValues[4],
-                    backgroundColor: 'rgba(203, 99, 232, 0.2)', // Color de relleno rojo claro
-                    borderColor: 'rgba(203, 99, 232, 1)', // Borde rojo
+                    backgroundColor: 'rgb(0, 255, 0)', // Color de relleno rojo claro
+                    borderColor: 'rgb(0, 255, 0)', // Borde rojo
                     borderWidth: 1,
                     pointRadius: 3,
                     tension: 0.1
